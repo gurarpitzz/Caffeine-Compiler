@@ -1,10 +1,10 @@
 <?php
-// ✅ Start session safely (prevents duplicate session_start warnings)
+//  Start session safely (prevents duplicate session_start warnings)
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// ✅ Redirect if not logged in
+// Redirect if not logged in
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
     exit;
@@ -219,3 +219,4 @@ if (!isset($_SESSION['user'])) {
 
 </body>
 </html>
+
